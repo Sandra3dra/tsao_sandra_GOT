@@ -35,9 +35,10 @@
 		//this is width of one img
 		const offSet = 600;
 		//total distance we need to move for each shield click on
-		totalOffset = this.dataset.offset * offSet + "px";
+		totalOffset = this.dataset.offset * offSet;// + "px";
 		// set the style (css animate for us)
-		banners.style.right =totalOffset;
+		// banners.style.right =totalOffset;
+		TweenMax.to(banners, 0.8, {right: totalOffset});
 	}
 
 	// shields.forEach(shield => shield.addEventListener("click", showLightbox));
