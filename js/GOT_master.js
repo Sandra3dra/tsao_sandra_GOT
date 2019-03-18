@@ -9,10 +9,13 @@
 
 	function showLightbox() {
 		lightBox.classList.add("show-lightbox");
+
 	}
 
 	function hideLightbox() {
 		lightBox.classList.remove("show-lightbox");
+		video.currentTime = 0;
+		video.pause();
 	}
 
 	shields.forEach(shield => shield.addEventListener("click", showLightbox));
