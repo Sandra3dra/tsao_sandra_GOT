@@ -99,7 +99,7 @@ main {
 /* add styles here for lightbox and video */
 .lightbox{
 	position: absolute;
-	top: -110px;
+	top: 0;
 	height: 100%;
 	width: 100%;
 	text-align: center;
@@ -118,6 +118,22 @@ main {
 	top: 110px;
 	cursor: pointer;
 	font-size: 2em;
+}
+
+.house-name {
+	font-size: 2rem;
+	letter-spacing: 1px;
+	margin-top: 60px;
+}
+
+.house-info {
+	color: white;
+	font-size: 1.5rem;
+	margin: 20px auto 0 auto;
+	width: 70%;
+	letter-spacing: 1px;
+	line-height: 1.5;
+	text-align: justify;
 }
 
 video {
