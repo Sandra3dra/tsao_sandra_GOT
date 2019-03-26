@@ -37,21 +37,7 @@
 	
 	];
 
-	function showLightbox() {
-		//grab right video source
-		// debugger;
-		//get the lowercase house name from the class list
-		let targetHouse = this.className.split(" ")[1];
-
-		let targetSrc = targetHouse.charAt(0).toUpperCase() + targetHouse.slice(1);
-
-		video.src = `video/House-${targetSrc}.mp4`;
-
-
-		lightBox.classList.add("show-lightbox");
-		video.load();
-		video.play();
-	}
+	
 
 	function closeLightbox() {
 		lightBox.classList.remove("show-lightbox");
@@ -68,17 +54,32 @@
 
 		houseName.textContent = `House ${houseData[0 + oneOffset][0]}`; //this too
 		houseInfo.textContent = houseData[0 + oneOffset][1]; //this will only be the stark 
+		const targetHouse = this.className.split(` `)[1];
+		function showLightbox() {
+		//grab right video source
+		// debugger;
+		//get the lowercase house name from the class list
+		
+		let targetSrc = targetHouse.charAt(0).toUpperCase() + targetHouse.slice(1);
+
+		video.src = `video/House-${targetSrc}.mp4`;
 
 
+		lightBox.classList.add("show-lightbox");
+		video.load();
+		video.play();
+	}
 
 		// set the style (css animate for us)
 		// banners.style.right =totalOffset;
-		TweenMax.to(banners, 0.8, {right: totalOffset});
+		TweenMax.to(banners, 0.8, {right: totalOffset})
+			.eventCallback("onComplete", showLightbox);;
 		
 	}
 
 	// shields.forEach(shield => shield.addEventListener("click", showLightbox));
 	shields.forEach(shield => shield.addEventListener("click", animateBanner));
+
 	
 	
 	video.addEventListener("ended", closeLightbox);
