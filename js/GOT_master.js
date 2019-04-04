@@ -9,7 +9,7 @@
 		 	exit = document.querySelector(".lightbox-close"),
 		 	banners = document.querySelector("#houseImages"),
 		 	houseName = document.querySelector(".house-name"),
-		 	houseInfo = document.querySelector(".house-info");;
+		 	houseInfo = document.querySelector(".house-info");
 
 	const houseData = [
 	[`STARK`,
@@ -37,7 +37,7 @@
 	
 	];
 
-	
+	TweenMax.from(banners, 1.5, {opacity: 0, x: -1800});
 
 	function closeLightbox() {
 		lightBox.classList.remove("show-lightbox");
@@ -54,7 +54,9 @@
 
 		houseName.textContent = `House ${houseData[0 + oneOffset][0]}`; //this too
 		houseInfo.textContent = houseData[0 + oneOffset][1]; //this will only be the stark 
+
 		const targetHouse = this.className.split(` `)[1];
+
 		function showLightbox() {
 		//grab right video source
 		// debugger;
@@ -69,11 +71,11 @@
 		video.load();
 		video.play();
 	}
+		const lightboxAni = document.querySelector(".show-lightbox");
 
-		// set the style (css animate for us)
-		// banners.style.right =totalOffset;
+
 		TweenMax.to(banners, 0.8, {right: totalOffset})
-			.eventCallback("onComplete", showLightbox);;
+			.eventCallback("onComplete", showLightbox);
 		
 	}
 
