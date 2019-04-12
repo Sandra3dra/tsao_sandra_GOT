@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>DOM Traversal</title>
@@ -12,17 +12,19 @@
     <main>
 
     <section id="imageContainer">
+        <h2 class="hidden">Shields</h2>
     	<div id="houseImages" style="right: 0;"> <!-- add in all of the images to make a scrolling "banner" -->
-    		<img src="images/stark.jpg"/>
-    		<img src="images/baratheon.jpg"/>
-    		<img src="images/lannister.jpg"/>
-    		<img src="images/tully.jpg"/>
-    		<img src="images/greyjoy.jpg"/>
-    		<img src="images/arryn.jpg"/>
+    		<img src="images/stark.jpg" alt="Stark"/>
+    		<img src="images/baratheon.jpg" alt="Baratheon"/>
+    		<img src="images/lannister.jpg" alt="Lannister"/>
+    		<img src="images/tully.jpg" alt="Tully"/>
+    		<img src="images/greyjoy.jpg" alt="Greyjoy"/>
+    		<img src="images/arryn.jpg" alt="Arryn"/>
         </div>
     </section>
 
     <nav id="bottomNav">
+        <h2 class="hidden">Videos</h2>
     	<ul id="navList">
         	<!-- custom data attribute, allowing to pass custom data https://developer.mozilla.org/en/docs/Web/API/HTMLElement/dataset -->
             <li><div class="sigil-container stark" data-offset="0"></div></li>
@@ -43,6 +45,7 @@
 
 <!-- add lightbox here -->
 <section class="lightbox">
+    <h2 class="hidden">Stories</h2>
     <span class="lightbox-close">X</span>
     <video src="video/House-Stark.mp4" muted autoplay controls></video>
 </section>

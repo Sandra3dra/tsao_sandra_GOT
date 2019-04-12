@@ -28,6 +28,11 @@ main {
 	top:30px;
 }
 
+.hidden
+{
+	display: none;
+}
+
 #imageContainer {
 	width:600px;
 	height:360px;
